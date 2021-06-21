@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio2.Actualizar">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Ver datos guardados" x:Name="menuToolbar"
+                     Order="Primary"
+                     
+                     Priority="0"
+                     Clicked="lista_Clicked">
+
+        </ToolbarItem>
+
+    </ContentPage.ToolbarItems>
+
+
+    <StackLayout>
+        <Frame BackgroundColor="DarkViolet" Padding="24" CornerRadius="0">
+            <Label Text="Datos de usuario" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <ScrollView BackgroundColor="AliceBlue">
+            <StackLayout Padding="40,40,40,40">
+
+                <Label  FontSize="Subtitle" Text="ID"></Label>
+                <Entry   x:Name="Idu" Text="{Binding Id}"></Entry>
+                <Label  FontSize="Subtitle" Text="Nombre"></Label>
+                <Entry   x:Name="nombre" Text="{Binding Nombre}"></Entry>
+                <Label  FontSize="Subtitle" Text="Apellido"></Label>
+                <Entry  x:Name="apellido" Text="{Binding Apellido}"></Entry>
+                <Label  FontSize="Subtitle" Text="Edad"></Label>
+                <Entry Keyboard="Numeric"  x:Name="edad" Text="{Binding Edad}"></Entry>
+                <Label  FontSize="Subtitle" Text="Correo"></Label>
+                <Entry Keyboard="Email" x:Name="correo" Text="{Binding Correo}"></Entry>
+                <Label  FontSize="Subtitle" Text="Direccion"></Label>
+                <Entry x:Name="direccion" Text="{Binding Direccion}"></Entry>
+                <Label FontSize="Subtitle" Text="fecha"></Label>
+                <DatePicker  x:Name="fecha"></DatePicker>
+
+
+                <Button Margin="10" FontFamily="Ubuntu" x:Name="btnAct" Clicked="btnAct_Clicked" Text="Actualizar Datos " BackgroundColor="DarkViolet" TextColor="White" CornerRadius="10" FontSize="23" Padding="30,10,30,10"/>
+                <Button Margin="10" FontFamily="Ubuntu" x:Name="btnDlt" Clicked="btnDlt_Clicked" Text="Borrar Datos " BackgroundColor="DarkViolet" TextColor="White" CornerRadius="10" FontSize="23" Padding="30,10,30,10"/>
+
+
+            </StackLayout>
+        </ScrollView>
+
+    </StackLayout>
+
+</ContentPage>

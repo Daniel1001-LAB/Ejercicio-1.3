@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio2.lista">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <ListView  x:Name="datos" ItemSelected="lista_ItemSelected" >                <ListView.ItemTemplate>                    <DataTemplate>                        <ViewCell>                            <Grid>                                <Grid.RowDefinitions>                                    <RowDefinition Height="auto"/>                                    <RowDefinition Height="auto"/>                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>                                <Grid.ColumnDefinitions>                                    <ColumnDefinition Width="*"/>                                    <ColumnDefinition Width="*"/>                                    <ColumnDefinition Width="*"/>                                    <ColumnDefinition Width="*"/>                                    <ColumnDefinition Width="*"/>                                    <ColumnDefinition Width="*"/>                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>                                <Label Text="{Binding id}" Grid.Row="0" Grid.Column="0"></Label>                                <Label Text="{Binding name}" Grid.Row="0" Grid.Column="1"></Label>                                <Label Text="{Binding apellido}" Grid.Row="0" Grid.Column="2"></Label>                                <Label Text="{Binding edad}" Grid.Row="0" Grid.Column="3"></Label>                                <Label Text="{Binding correo}" Grid.Row="0" Grid.Column="4"></Label>                                <Label Text="{Binding direccion}" Grid.Row="0" Grid.Column="5"></Label>                                <Label Text="{Binding fecha}" Grid.Row="0" Grid.Column="6"></Label>                            </Grid>                        </ViewCell>                    </DataTemplate>                </ListView.ItemTemplate>
+            </ListView>
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
